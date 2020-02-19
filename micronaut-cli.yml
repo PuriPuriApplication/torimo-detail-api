@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: torimo.detail.api
+---
+testFramework: kotlintest
+sourceLanguage: kotlin
