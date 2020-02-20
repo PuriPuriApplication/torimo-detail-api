@@ -1,4 +1,4 @@
-# tirimo-detail-api
+# torimo-detail-api
 
 TORIMOの詳細、いいね、フォロー機能のAPIです。
 
@@ -6,7 +6,7 @@ TORIMOの詳細、いいね、フォロー機能のAPIです。
 
 ### IntelliJの場合
 
-Applocation.ktを実行
+`Applocation.kt`を実行
 
 ### その他
 
