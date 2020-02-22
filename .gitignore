@@ -12,5 +12,7 @@ out/
 .settings
 .classpath
 
+/docker/app/*.jar
+
 # test database
 docker/mysql/data

@@ -77,3 +77,12 @@ shadowJar {
 
 run.classpath += configurations.developmentOnly
 run.jvmArgs('-noverify', '-XX:TieredStopAtLevel=1', '-Dcom.sun.management.jmxremote')
+
+// buildしたjarファイルを./docker/app/jarにコピー
+task copy(type: Copy){
+    from 'build/libs'
+    into 'docker/app'
+    include '*-all.jar'
+}
+
+build.dependsOn copy
