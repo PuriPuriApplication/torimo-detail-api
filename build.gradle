@@ -18,7 +18,7 @@ repositories {
 
 configurations {
     // for dependencies that are needed for development only
-    developmentOnly 
+    developmentOnly
 }
 
 dependencies {
@@ -28,11 +28,14 @@ dependencies {
     implementation "io.micronaut:micronaut-runtime"
     implementation "io.micronaut:micronaut-http-server-netty"
     implementation "io.micronaut:micronaut-http-client"
+    implementation "io.micronaut.configuration:micronaut-hibernate-jpa"
+    implementation "io.micronaut.configuration:micronaut-jdbc-hikari"
     kapt platform("io.micronaut:micronaut-bom:$micronautVersion")
     kapt "io.micronaut:micronaut-inject-java"
     kapt "io.micronaut:micronaut-validation"
     kaptTest platform("io.micronaut:micronaut-bom:$micronautVersion")
     kaptTest "io.micronaut:micronaut-inject-java"
+    runtime "com.h2database:h2"
     runtimeOnly "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.8"
     runtimeOnly "ch.qos.logback:logback-classic:1.2.3"
     testImplementation platform("io.micronaut:micronaut-bom:$micronautVersion")
@@ -55,16 +58,16 @@ allOpen {
 
 compileKotlin {
 	kotlinOptions {
-	    jvmTarget = '1.8' 
+	    jvmTarget = '1.8'
 	    //Will retain parameter names for Java reflection
-	    javaParameters = true 
+	    javaParameters = true
 	}
 }
 
 compileTestKotlin {
 	kotlinOptions {
-	    jvmTarget = '1.8' 
-	    javaParameters = true 
+	    jvmTarget = '1.8'
+	    javaParameters = true
 	}
 }
 
