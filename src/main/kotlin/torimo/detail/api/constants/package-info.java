@@ -1,0 +1,1 @@
+package torimo.detail.api.constants;
